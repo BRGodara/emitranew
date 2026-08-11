@@ -1,0 +1,124 @@
+html::-webkit-scrollbar{
+	display: none;
+}
+#Main::-webkit-scrollbar{
+	display: none;
+}
+#List::-webkit-scrollbar{
+	display: none;
+}
+
+
+
+html{
+    background-color: #ffffff;
+}
+
+#Main{
+    height: 588px;
+    width: 1346px;
+    background-color: #ffffff;
+    background-size: 100% 100%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    overflow-y: scroll;
+    margin: 0px 0px;
+}
+#Title{
+    height: 50px;
+    width: 1346px;
+    background: transparent;
+    border-bottom: 2px solid #000000;
+    display: block;
+    position: relative;
+    overflow-y: hidden;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 900;
+    padding-top: 9px;
+    box-sizing: border-box;
+    color: #000000;
+    z-index: 9;
+}
+
+#List{
+    height: 538px;
+    width: 1346px;
+    background: transparent;
+    display: block;
+    position: relative;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#List div{
+    height: 40px;
+    width: 1346px;
+    background: transparent;
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #000000;
+
+}
+#List div p{
+    height: 38px;
+    width: 221px;
+    background: transparent;
+    border-right: 2px solid #000000;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 19px;
+    color: #000000;
+    padding-top: 6px;
+    padding-left: 4px;
+    overflow: hidden;
+}
+#H1{
+    font-weight: 900;
+}
+#List div:hover{
+    background-color: #e3ff43;
+    color: black;
+}
+
+
+#btn a{
+    all: unset;
+    height: 50px;
+    width: 50px;
+    background: #ff0000;
+    background-size: 100% 100%;
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 15px;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    padding: 5px 8px;
+    z-index: 10;
+    font-size: 30px;
+    font-weight: 900;
+    box-sizing: border-box;
+}
+
+#btn a:hover{
+    background: #ffc400;
+    color: #000000;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+

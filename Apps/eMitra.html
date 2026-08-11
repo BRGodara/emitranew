@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eMitra Daily Transaction Manager</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#0066cc;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    background:#0066cc;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#004d99;
+}
+
+.summary{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.summary-box{
+    background:#0066cc;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#0066cc;
+    color:white;
+    padding:10px;
+}
+
+table td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.delete-btn{
+    background:red;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>eMitra Daily Transaction Manager</h1>
+
+<div class="card">
+    <h2>Add Transaction</h2>
+
+    <input type="date" id="date">
+
+    <input type="text" id="customer" placeholder="Customer Name">
+
+    <select id="service">
+        <option value="">Select Service</option>
+        <option>Electricity Bill</option>
+        <option>Water Bill</option>
+        <option>Aadhaar Update</option>
+        <option>PAN Card</option>
+        <option>CET Form</option>
+        <option>Scholarship Form</option>
+        <option>Banking Service</option>
+        <option>Other</option>
+    </select>
+
+    <input type="number" id="amount" placeholder="Transaction Amount">
+
+    <input type="number" id="commission" placeholder="Commission Earned">
+
+    <button onclick="addTransaction()">Add Transaction</button>
+</div>
+
+<div class="summary">
+    <div class="summary-box">
+        <h3 id="totalTxn">0</h3>
+        <p>Total Transactions</p>
+    </div>
+
+    <div class="summary-box">
+        <h3 id="totalAmount">₹0</h3>
+        <p>Total Amount</p>
+    </div>
+
+    <div class="summary-box">
+        <h3 id="totalCommission">₹0</h3>
+        <p>Total Commission</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Transaction Records</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>Service</th>
+                <th>Amount</th>
+                <th>Commission</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="transactionTable"></tbody>
+    </table>
+</div>
+
+</div>
+
+<script>
+
+let transactions = JSON.parse(localStorage.getItem("emitraTransactions")) || [];
+
+function addTransaction(){
+
+    let date = document.getElementById("date").value;
+    let customer = document.getElementById("customer").value;
+    let service = document.getElementById("service").value;
+    let amount = document.getElementById("amount").value;
+    let commission = document.getElementById("commission").value;
+
+    if(!date || !customer || !service || !amount || !commission){
+        alert("Please fill all fields");
+        return;
+    }
+
+    transactions.push({
+        date,
+        customer,
+        service,
+        amount:Number(amount),
+        commission:Number(commission)
+    });
+
+    saveData();
+    renderTable();
+
+    document.getElementById("customer").value="";
+    document.getElementById("service").value="";
+    document.getElementById("amount").value="";
+    document.getElementById("commission").value="";
+}
+
+function renderTable(){
+
+    let table = document.getElementById("transactionTable");
+    table.innerHTML="";
+
+    let totalAmount=0;
+    let totalCommission=0;
+
+    transactions.forEach((txn,index)=>{
+
+        totalAmount += txn.amount;
+        totalCommission += txn.commission;
+
+        table.innerHTML += `
+        <tr>
+            <td>${txn.date}</td>
+            <td>${txn.customer}</td>
+            <td>${txn.service}</td>
+            <td>₹${txn.amount}</td>
+            <td>₹${txn.commission}</td>
+            <td>
+                <button class="delete-btn" onclick="deleteTransaction(${index})">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        `;
+    });
+
+    document.getElementById("totalTxn").innerText=transactions.length;
+    document.getElementById("totalAmount").innerText="₹"+totalAmount;
+    document.getElementById("totalCommission").innerText="₹"+totalCommission;
+}
+
+function deleteTransaction(index){
+    if(confirm("Delete this transaction?")){
+        transactions.splice(index,1);
+        saveData();
+        renderTable();
+    }
+}
+
+function saveData(){
+    localStorage.setItem(
+        "emitraTransactions",
+        JSON.stringify(transactions)
+    );
+}
+
+renderTable();
+
+document.getElementById("date").value =
+new Date().toISOString().split("T")[0];
+
+</script>
+
+</body>
+</html>
