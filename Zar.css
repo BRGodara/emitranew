@@ -1,0 +1,100 @@
+html::-webkit-scrollbar{
+	display: none;
+}
+#Body #Zar1::-webkit-scrollbar{
+	display: none;
+}
+
+
+#Body #Zar1{
+    height: 480px;
+    width: 1305px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    overflow-y: scroll;
+    margin: 62px 30px;
+}
+
+
+
+
+
+.Zar{
+    padding: 13px 17.5px;
+    margin: 0;
+    box-sizing: border-box;
+}
+ #Sub{
+    height: 35px;
+    width: 410px;
+    background: #eef6ff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: block;
+    float: left;
+    padding: 5px;
+    margin: 6px;
+}
+.Zar #Sub a{
+    all: unset;
+    height: 35px;
+    width: 410px;
+    text-align: left;
+    background: transparent;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 15px;
+    font-size: 22px;
+    padding: 0 10px;
+    overflow: hidden;
+    color: #00346e;
+}
+.Zar #Sub:hover{
+    color: #001124;
+    background: #4fa1ff;
+}
+
+
+
+
+#Body #ZarX{
+    height: 28px;
+    width: 1303px;
+    background: transparent;
+    border-top: 2px solid #00428d;
+    display: block;
+    position: absolute;
+    top: 508px;
+    left: 30px;
+    overflow-y: hidden;
+    font-size: 20px;
+    text-align: center;
+    color: #00428d;
+    padding: 2px 0 0 0;
+}
+
+#ZarText{
+    display: inline-block;
+}
+#ZarBtn{
+    display: inline-block;
+    color: #e1f0ff;
+    text-decoration: none;
+    background: #0067dd;
+    height: 24px;
+    width: 120px;
+    border: 1px solid #00428d;
+    border-radius: 10px;
+}
+#ZarBtn:hover{
+    background: #9ecafd;
+    border: 1px solid #0066db;
+    color: #003366;
+}
+
+
+

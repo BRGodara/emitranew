@@ -1,0 +1,256 @@
+/* Body Section */
+html::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar1::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar2::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar3::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar4::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar5::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar6::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar7::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar8::-webkit-scrollbar{
+	display: none;
+}
+#Body #Tar9::-webkit-scrollbar{
+	display: none;
+}
+#Body #ZarX::-webkit-scrollbar{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+#Body #Tar1{
+    height: 144px;
+    width: 915px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    overflow-y: scroll;
+}
+#Body #Tar2{
+    height: 144px;
+    width: 915px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 222px;
+    left: 30px;
+    overflow-y: scroll;
+}
+#Body #Tar3{
+    height: 144px;
+    width: 915px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 387px;
+    left: 30px;
+    overflow-y: scroll;
+}
+#Body #Tar4{
+    height: 144px;
+    width: 366px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 970px;
+    overflow-y: scroll;
+}
+#Body #Tar5{
+    height: 144px;
+    width: 366px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 222px;
+    left: 970px;
+    overflow-y: scroll;
+}
+#Body #Tar6{
+    height: 144px;
+    width: 366px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 387px;
+    left: 970px;
+    overflow-y: scroll;
+}
+#Body #Tar7{
+    height: 144px;
+    width: 915px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 560px;
+    left: 30px;
+    overflow-y: scroll;
+}
+#Body #Tar8{
+    height: 254px;
+    width: 915px;
+    background-color: #00d3fd;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 722px;
+    left: 30px;
+    overflow-y: scroll;
+}
+#Body #Tar9{
+    height: 480px;
+    width: 366px;
+    background-size: 100% 100%;
+    border: 2px solid #00428d;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 560px;
+    left: 970px;
+    overflow-y: scroll;
+}
+
+#Body #TarH{
+    height: 60px;
+    width: 1px;
+    background: transparent
+    display: block;
+    position: absolute;
+    top: 1548px;
+    left: 12px;
+    overflow-y: hidden;
+    z-index: 1;
+}
+
+
+.Tar{
+    padding: 15px;
+    margin: 0;
+    box-sizing: border-box;
+}
+ #Sub{
+    height: 100px;
+    width: 100px;
+    background: transparent;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+}
+.Tar #Sub #Logo{
+    height: 90px;
+    width: 90;
+    background: #003575;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: #003372 solid 1px;
+    z-index: 1;
+}
+.Tar #Sub #Logo a{
+    all: unset;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    background: transparent;
+    border-radius: 15px;
+}
+.Tar #Sub #Logo a:hover{
+    background: #feffff75;
+}
+
+
+
+
+#Body #ZarX{
+    height: 46px;
+    width: 915px;
+    background-color: #00d3fd;
+    border: 1px solid #00428d;
+    border-radius: 15px;
+    display: block;
+    position: absolute;
+    top: 990px;
+    left: 30px;
+    overflow-y: hidden;
+    font-size: 28px;
+    text-align: center;
+    color: #00428d;
+    padding: 3px 0 0 0;
+    box-sizing: border-box;
+}
+
+#ZarText{
+    display: inline-block;
+}
+
+#ZarBtn:hover{
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

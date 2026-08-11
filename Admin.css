@@ -1,0 +1,106 @@
+#Login{
+    height: 100%;
+    width: 100%;
+    background: #68ffb9;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+}
+#LoginLogo{
+    height: 10%;
+    width: 25%;
+    background: transparent;
+    color: #004e2a;
+    border-bottom: 2px solid #004e2a;
+    box-sizing: border-box;
+    display: block;
+    margin: 10% 0 3% 37%;
+    text-align: center;
+    font-size: 225%;
+    padding-top: 1%;
+}
+#Username{
+    all: unset;
+    height: 5%;
+    width: 25%;
+    background: transparent;
+    color: #004e2a;
+    border-bottom: 1px solid #004e2a;
+    box-sizing: border-box;
+    display: block;
+    margin: 3% 0 0 37%;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 900;
+    overflow: hidden;
+}
+#Password{
+    all: unset;
+    height: 5%;
+    width: 25%;
+    background: transparent;
+    color: #004e2a;
+    border-bottom: 1px solid #004e2a;
+    box-sizing: border-box;
+    display: block;
+    margin: 3% 0 0 37%;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 900;
+    overflow: hidden;
+}
+#LoginBtn{
+    height: 5%;
+    width: 7%;
+    background: #00ff88;
+    color: #004e2a;
+    border: 1px solid #004e2a;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 4% 0 0 5%;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 900;
+    padding-top: 0.3%;
+}
+#LoginBtn:hover{
+    background: #009650;
+    color: #7effc3;
+    border: 1px solid #00ff88;
+}
+
+#GoBackBtn{
+    all: unset;
+    height: 5%;
+    width: 7%;
+    background: #00ff88;
+    color: #004e2a;
+    border: 1px solid #004e2a;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 4% 0 0 40%;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 900;
+    padding-top: 0.3%;
+}
+#GoBackBtn:hover{
+    background: #009650;
+    color: #7effc3;
+    border: 1px solid #00ff88;
+}
+
+
+
+
+
+
+
+
+
+
+
